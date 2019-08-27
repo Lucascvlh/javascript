@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <script>
+        function ex19(){
+            var op, pco, pcov, lucro, lucro1 = 0, lucro2 = 0,lucrotot, resultado;
+            while ((op != "f") && (op != "F")){
+                op = String(prompt("[A] À Vista\n[P] À Prazo\n[F] Para sair\nQual a forma de pagamento: "));
+                pco = Number(prompt("Qual o preço de compra: "));
+                pcov = Number(prompt("Qual o preço de venda: "));
+                lucro = pcov - pco;
+                if (lucro > 1000){
+                    lucro1++;
+                }
+                if (lucro < 200){
+                    lucro2++;
+                }
+                lucrotot = lucrotot + lucro;
+                console.log("O lucro dessa mercadoria foi de R$"+lucro);
+                console.log("------------------------------------------");
+            }
+            resultado = "Saindo do programa.";
+        console.log("A quantidade de ações acima de R$ 1000,00 foi de " + lucro1);
+        console.log("A quantidade de lucro abaixo de R$ 200,00 foi de " + lucro2);
+        console.log("O lucro total foi de " + lucrotot);  
+        } 
+        
+    </script>
+    <header>
+        <from method="POST">
+            <p><button onclick="ex19()">Calcular</button></p>
+
+        </from>
+    </header>
+</html>     

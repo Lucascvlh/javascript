@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <meta charset="UTF-8">
+        </head>
+    <script>
+        function calculamedia(){
+            var qtde;
+            var soma = 0;
+            var media;
+            var i;
+            for(i = 0;i < 10; i++){
+                qtde = Number(prompt("Digite um numero: "));
+                soma = soma + qtde;
+                if (qtde == 0){
+                    break
+                }
+            }
+            media = soma / i;
+            document.getElementById("resultado").innerHTML = media;
+        } 
+    </script>
+    <body>
+        <button onclick="calculamedia()">Exemplo de FOR com o BREAK</button>
+        <p id="resultado"></p>
+    </body>
+</html>

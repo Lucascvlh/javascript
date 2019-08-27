@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <script>
+        function ex6(){
+            var cont = 0, vista = 0, prazo = 0;
+            var v = 'V';
+            var p = 'P';
+            while (cont < 3){
+                op = String(prompt("Qual a forma de pagamento: "));
+                valor = Number(prompt("Digite um valor: "));
+                cont = cont + 1;
+                if (op = v){
+                    vista = vista + valor;
+                }
+                if (op = p){
+                prazo = prazo + valor;
+                }
+                else{
+                    op = "Opção invalida";
+                } 
+            }
+            total = prazo + vista;
+            parc = prazo / 3;
+            console.log("Total das vendas a vista foi de R$" + vista);
+            console.log("Total das vendas a prazo foi de R$" + prazo);
+            console.log("Total das compras foi de R$" + total);
+            console.log("A primeira parcela vai ser no valor de R$" + parc);
+        }
+    </script>
+    <header>
+        <from method="POST">
+            <h1>Escolha a opção desejada abaixo</h1>
+            <p>V = Pagamento à vista</p>
+            <p>P = Pagamento à prazo</p>
+            <p><button onclick="ex6()">Calcular</button></p>
+        </from>
+    </header>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <script>
+        function ex2(){
+            var nota1, nota2, media;
+            var mensagem;
+            nota1 = Number(document.getElementById("nota1").value);
+            nota2 = Number(document.getElementById("nota2").value);
+            media = (nota1 + nota2)/2;
+            if ((media >= 7) && (media <= 10)){
+                mensagem = "Aprovado";
+            }
+            else if ((media >= 3) && (media < 7)){
+                mensagem = "Exame"
+            }
+                else if ((media >= 0) && (media < 3)){
+                    mensagem = "Reprovado"
+                }
+                    else{
+                        mensagem = "Média impossivel de calcular"
+                    }
+            document.getElementById("resultado").innerHTML = mensagem;
+        }
+    </script>
+    <header>
+        <from method="POST">
+            <p><label>Nota 1:</label><input type="number" id="nota1"></p>
+            <p><label>Nota 2:</label><input type="number" id="nota2"></p>
+            <p><button onclick="ex2()">Calcular</button></p>
+            <p id="resultado"></p>
+        </from>
+    </header>
+</html>

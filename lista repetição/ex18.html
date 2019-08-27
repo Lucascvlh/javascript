@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <script>
+        function calculamedia(){
+            var idade, sexo, salario, media, menor, maior, qtdeM = 0, menorSal, menorid, menorsex, cont = 0;
+            var somasal = 0;
+            for(i=0;1<5;i++){
+                idade = Number(prompt("Digite sua idade: "));
+                if(idade < 0){
+                    break;
+                }
+                sexo = prompt("Qual o seu sexo: ");
+                salario = Number(prompt("Qual o seu salário: "));
+                somasal = somasal + salario;
+                cont++;
+                if(idade < menor){
+                    menor = idade;
+
+                }
+                if(idade > maior){
+                    maior = idade;
+                }
+                if((sexo == "f") && (salario < 200)){
+                    qtdeM++
+                }
+                if(salario < menorSal){
+                    menorSal = salario;
+                    menorid = idade;
+                    menorsex = sexo;
+                }
+            }
+            media = somasal/cont;
+            document.getElementById("resultado").innerHTML = media;
+            document.getElementById("resultado1").innerHTML = maior;
+            document.getElementById("resultado2").innerHTML = menor;
+            document.getElementById("resultado3").innerHTML = qtdeM;
+            document.getElementById("resultado4").innerHTML = menorid;
+            document.getElementById("resultado5").innerHTML = menorsex;
+        } 
+    </script>
+    <body>
+        <button onclick="calculamedia()">Exemplo de FOR com o BREAK</button>
+        <p id="resultado"></p>
+        <p id="resultado1"></p>
+        <p id="resultado2"></p>
+        <p id="resultado3"></p>
+        <p id="resultado4"></p>
+        <p id="resultado5"></p>
+    </body>
+</html>

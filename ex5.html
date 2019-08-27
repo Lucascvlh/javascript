@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <script>
+        function ex5(){
+            var num1, num2;
+            op = Number(document.getElementById("opcao").value)
+            num1 = Number(document.getElementById("num1").value);
+            num2 = Number(document.getElementById("num2").value);
+            switch (op){
+                case 1: res = (num1 + num2)/2;
+                        break;
+                case 2: if (num1 > num2){
+                            res = (num1 - num2)
+                        }  
+                        else{
+                            res = (num2 - num1)
+                        };
+                        break;
+                case 3:res = (num1 * num2);
+                        break;
+                case 4: if (num2 != 0){
+                            res = num1 / num2;
+                        }
+                        else{
+                            res = "Divisão por zero";
+                        };
+                        break;
+                default: res = "Opção invalida";
+            }
+            document.getElementById("resultado").innerHTML = res;
+        }
+    </script>
+    <header>
+        <from method="POST">
+            <h1>Escolha a opção desejada abaixo</h1>
+            <p>1 = Média entre os numeros digitados</p>
+            <p>2 = Diferença do maior pelo menor</p>
+            <p>3 = Produto entre os numeros digitados</p>
+            <p>4 = Divisão do primeiro pelo segundo</p>
+            <p><label>Escolher a opção: </label><input type="number" id="opcao"></p>
+            <p><label>Nota 1:</label><input type="number" id="num1"></p>
+            <p><label>Nota 2:</label><input type="number" id="num2"></p>
+            <p><button onclick="ex5()">Calcular</button></p>
+            <p id="resultado"></p>
+        </from>
+    </header>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <script>
+        function ex2(){
+            var pcing = 5, ing = 120, total, lucro; 
+            for (pcing = 5.0; pcing >= 1.0; pcing = pcing - 0.5){ 
+                total = ing * pcing;
+                lucro = total - 200;
+                console.log("O lucro maximo pode ser de R$"+lucro);
+                console.log("O valor do ingresso é de R$"+pcing);
+                console.log("Foram vendidos "+ing+" ingresso");
+                console.log("-----------------------------------");
+                ing = ing + 26;
+            }
+        }      
+    </script>
+    <header>
+        <from method="POST">
+            <p><button onclick="ex2()">Calcular</button></p>
+
+        </from>
+    </header>
+</html>     

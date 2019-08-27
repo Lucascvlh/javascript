@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <script>
+        function ex7(){
+            var contpeso = 0, contal = 0, totalt = 0, conti = 0, cont = 0;
+            while (cont < 5){
+                idade = Number(prompt("Qual a sua idade: "));
+                peso = Number(prompt("Qual o seu peso: "));
+                altura = Number(prompt("Qual a sua altura: "));
+                cont = cont + 1;
+                if (idade >= 50){
+                    conti = conti + 1;
+                }
+                if ((idade >= 10) && (idade <= 20)){
+                    totalt = totalt + altura;
+                    contal = contal + 1;
+                }
+                if (peso < 40){
+                    contpeso = contpeso + 1;
+                } 
+            }
+            porc = (contpeso/5)* 100;
+            altur = totalt / contal;
+            console.log("Pessoas com idade maior de 50 anos = " + conti);
+            console.log("Media de altura entre 10 e 20 anos = " + altur);
+            console.log("Porcentagem de pessoas com peso abaixo de 40Kg = " + porc +"%");
+        }
+    </script>
+    <header>
+        <from method="POST">
+            <p><button onclick="ex7()">Calcular</button></p>
+        </from>
+    </header>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <meta charset="UTF-8">
+        </head>
+    <script>
+        function calculamedia(){
+            var qtde;
+            var soma = 0;
+            var media;
+            var i;
+            var tipo;
+            var cont = 0;
+            for(i = 0;i < 10; i++){
+                tipo = prompt("Digite o produto: ");
+                if(tipo == "sair"){
+                    break;
+                }
+                qtde = Number(prompt("Digite um numero: "));
+                if (tipo == "medalha"){
+                    continue; //pula e para o proximo loop
+                }
+                if (qtde == 0){
+                    break;
+                }
+                soma = soma + qtde;
+                cont++;
+            }
+            media = soma / cont;
+            document.getElementById("resultado").innerHTML = media.toFixed(2);
+        } 
+    </script>
+    <body>
+        <button onclick="calculamedia()">Exemplo de FOR com o BREAK</button>
+        <p id="resultado"></p>
+    </body>
+</html>

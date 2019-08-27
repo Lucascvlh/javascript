@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <script>
+        function ex23(){
+            codigo = Number(document.getElementById("codigo").value);
+            quant = Number(document.getElementById("quantidade").value);
+            if ((codigo >= 1) && (codigo <=10)){
+                valor = "Preço unitário do produto R$ " + 10;
+                valor1 = 10;
+                precotot = "Preço total da nota R$ " + valor1 * quant;
+                precotot1 = valor1 * quant;
+                if (precotot1 <= 250){
+                    desc = "Desconto de R$ " + ((precotot1/100)*5);
+                    desc1 = (precotot1/100)*5;
+                    pf = "Preço final é de R$ " + (precotot1 - desc1);
+                }
+                else if ((precotot1 > 250) && (precotot1 <= 500)){
+                    desc = "Desconto de R$ " + ((precotot1/100)*10);
+                    desc1 = (precotot1/100)*5;
+                    pf = "Preço final é de R$ " + (precotot1 - desc1); 
+                }
+                    else{
+                        desc = "Desconto de R$ " + ((precotot1/100)*15);
+                        desc1 = (precotot1/100)*5;
+                        pf = "Preço final é de R$ " + (precotot1 - desc1); 
+                    }
+            }
+            else if ((codigo >= 11) && (codigo <=20)){
+                valor = "Preço unitário do produto R$ " + 15;
+                valor1 = 20;
+                precotot = "Preço total da nota R$ " + valor1 * quant;
+                precotot1 = valor1 * quant;
+                if (precotot1 <= 250){
+                    desc = "Desconto de R$ " + ((precotot1/100)*5);
+                    desc1 = (precotot1/100)*5;
+                    pf = "Preço final é de R$ " + (precotot1 - desc1); 
+                }
+                else if ((precotot1 > 250) && (precotot1 <= 500)){
+                    desc = "Desconto de R$ " + ((precotot1/100)*10);
+                    desc1 = (precotot1/100)*5;
+                    pf = "Preço final é de R$ " + (precotot1 - desc1); 
+                }
+                    else{
+                        desc = "Desconto de R$ " + ((precotot1/100)*15);
+                        desc1 = (precotot1/100)*5;
+                        pf = "Preço final é de R$ " + (precotot1 - desc1); 
+                    }
+            }
+                else if ((codigo >= 21) && (codigo <=30)){
+                    valor = "Preço unitário do produto R$ " + 20;
+                    valor1 = 30;
+                    precotot = "Preço total da nota R$ " + valor1 * quant;
+                    precotot1 = valor1 * quant;
+                    if (precotot1 <= 250){
+                        desc = "Desconto de R$ " + ((precotot1/100)*5);
+                        desc1 = (precotot1/100)*5;
+                        pf = "Preço final é de R$ " + (precotot1 - desc1); 
+                    }
+                    else if ((precotot1 > 250) && (precotot1 <= 500)){
+                        desc = "Desconto de R$ " + ((precotot1/100)*10);
+                        desc1 = (precotot1/100)*5;
+                        pf = "Preço final é de R$ " + (precotot1 - desc1); 
+                    }
+                        else{
+                            desc = "Desconto de R$ " + ((precotot1/100)*15);
+                            desc1 = (precotot1/100)*5;
+                            pf = "Preço final é de R$ " + (precotot1 - desc1); 
+                        }
+                }
+                    else if ((codigo >= 31) && (codigo <=40)){
+                        valor = "Preço unitário do produto R$ " + 30;
+                        valor1 = 40;
+                        precotot = "Preço total da nota R$ " + valor1 * quant;
+                        precotot1 = valor1 * quant;
+                        if (precotot1 <= 250){
+                            desc = "Desconto de R$ " + ((precotot1/100)*5);
+                            desc1 = (precotot1/100)*5;
+                            pf = "Preço final é de R$ " + (precotot1 - desc1); 
+                        }
+                        else if ((precotot1 > 250) && (precotot1 <= 500)){
+                            desc = "Desconto de R$ " + ((precotot1/100)*10);
+                            desc1 = (precotot1/100)*5;
+                            pf = "Preço final é de R$ " + (precotot1 - desc1); 
+                        }
+                            else{
+                                desc = "Desconto de R$ " + ((precotot1/100)*15); 
+                                desc1 = (precotot1/100)*5;
+                                pf = "Preço final é de R$ " + (precotot1 - desc1);
+                            }
+                    }
+                    else{
+                        valor = "Invalido";
+                        precotot = "Invalido";
+                        desc = "Invalido";
+                        pf = "Invalido";
+                    }
+            document.getElementById("valor").innerHTML = valor;
+            document.getElementById("precotot").innerHTML = precotot;
+            document.getElementById("desc").innerHTML = desc;
+            document.getElementById("pf").innerHTML = pf;
+        }
+    </script>
+    <header>
+        <from method="POST">
+            <p><label>Código do produto: </label><input type="number" id="codigo"></p>
+            <p><label>Quantidade comprada: </label><input type="number" id="quantidade"></p>
+            <p id="valor"></p>
+            <p id="precotot"></p>
+            <p id="desc"></p>
+            <p id="pf"></p>
+            <p><button onclick="ex23()">Calcular</button></p>
+        </from>
+    </header>
+</html>

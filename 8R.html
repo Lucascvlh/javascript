@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <script>
+        function ex8(){
+            var idade, peso, altura, olho, cabelo, i, mediaidade = 0, cont4 = 0, cont3 = 0, cont2 = 0, cont1 = 0;
+            for (i=1; i<= 10; i++){
+                idade = Number(prompt("Qual a sua idade: "));
+                peso = Number(prompt("Qual o seu peso: "));
+                altura = Number(prompt("Qual a sua altura: "));
+                olho = String(prompt("Cor dos olhos:\nA - Azul\nP - Preto\nV - Verde\nC - Castanho"));
+                cabelo = String(prompt("Cor dos cabelos:\nP - Preto\nC - Castanho\nL - Loiro\nR - Ruivo"))
+                if ((idade > 50) && (peso < 60)){
+                    cont1++;
+                }
+                if (altura < 1.5){
+                    mediaidade = mediaidade + idade;
+                    cont2++;
+                }
+                if ((olho == 'A') || (olho == 'a')){
+                    cont3++;
+                }
+                if ((cabelo = 'R') && (olho != 'A')){
+                    cont4++;
+                } 
+            }
+            porc = (cont3/6)* 100;
+            media = mediaidade / cont2;
+            alert("Pessoas com idade maior de 50 anos e peso menor que 60Kg = " + cont1);
+            alert("Média da idadee entre as pessoas com 1.50m de altura = " + media);
+            alert("Porcentagem de pessoas com olhos azuis = " + porc +"%");
+            alert("Quantidade de pessoas ruivas que nao tenha olhos azuis = " + media)
+        }
+    </script>
+    <header>
+        <from method="POST">
+            <p><button onclick="ex8()">Calcular</button></p>
+        </from>
+    </header>
+</html>
